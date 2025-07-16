@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let salesChart = null; // Referencia al gráfico de ventas
   let productDetailsChart = null; // Referencia al gráfico de detalles de productos
   let topProductsChart = null; // Referencia al gráfico de productos más vendidos
-
+// Variable global para almacenar los estados válidos como colección
+  let validStatusesCollection = [];
   // Obtiene el token del localStorage.
   const token = localStorage.getItem('token');
   console.log('Token:', token); // Para depuración
@@ -96,35 +97,35 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Actualiza el estado de una orden en la API.
    */
-  async function updateOrderStatus(orderId, newStatus) {
-    try {
-      const validStatuses = ['Pendiente', 'En Camino', 'Entregado'];
-      if (!validStatuses.includes(newStatus)) {
-        alert('Estado no válido.');
-        return;
-      }
-      const response = await fetch(`${API_URL}/orders/${orderId}/status`, {
-        method: 'PUT',
-        headers: authHeader,
-        body: JSON.stringify({ estado: newStatus })
-      });
-      const data = await response.json();
-      if (data.success) {
-        const order = orders.find(o => o._id === orderId);
-        if (order) {
-          order.estado = newStatus;
-          renderOrdersTable();
-          alert('Estado de la orden actualizado con éxito.');
-        }
-      } else {
-        throw new Error(data.error || data.msg || 'Error desconocido al actualizar el estado');
-      }
-    } catch (error) {
-      console.error('Error al actualizar el estado de la orden:', error);
-      alert(`Error al actualizar el estado: ${error.message}`);
+async function updateOrderStatus(orderId, newStatusName) {
+  try {
+    // Validar el estado contra la colección cargada
+    const isValidStatus = validStatusesCollection.some(status => status.nombre === newStatusName);
+    if (!isValidStatus) {
+      console.warn(`Estado no válido seleccionado: ${newStatusName} para orden ${orderId}.`);
+      return;
     }
-  }
 
+    // 1. Cambiar visualmente el select en la UI
+    const selectElement = document.querySelector(`.status-select[data-order-id="${orderId}"]`);
+    if (selectElement) {
+      selectElement.value = newStatusName; // Esto actualiza la selección en el dropdown
+      console.log(`Estado de la orden ${orderId} actualizado visualmente a "${newStatusName}".`);
+    } else {
+      console.warn(`Elemento select para la orden ${orderId} no encontrado al intentar actualizar.`);
+    }
+
+    // 2. Guardar el estado simulado en localStorage para persistencia
+    localStorage.setItem(`simulated_order_status_${orderId}`, newStatusName);
+
+    // NOTA: NO modificamos el array 'orders' aquí, ni llamamos a renderOrdersTable().
+    // El cambio es directo en el DOM y en localStorage.
+
+  } catch (error) {
+    console.error('Error al simular la actualización del estado de la orden:', error);
+    // No alert, just log the error
+  }
+}
   /**
    * Configura el filtro de fecha y el botón de "Mostrar Todas".
    */
