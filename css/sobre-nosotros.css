@@ -1,0 +1,417 @@
+body {
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #ea613e;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Encabezado igual a "Nosotros" */
+header {
+  background-color: #ffc640;
+  color: white;
+  padding-top: 0px;
+  min-height: 70px;
+  border-bottom: 3px solid #fbf8ef;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.nav-container {
+  font-family: cursive;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 5px 30px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 200px;
+  flex: 1 1 100px;
+}
+
+.Logo img {
+  width: 190px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.Logo img:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu p {
+  margin: 0;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu p:hover {
+  color: #ff7f00;
+  border-bottom: 2px solid #ff7f00;
+}
+/* Contenedor de botones dinámicos */
+#auth-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilos para los botones de administrador */
+.admin-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #ff7f00;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.admin-btn i {
+  font-size: 1.2em;
+}
+
+/* Vínculos (botones de Iniciar Sesión y Carrito) */
+.registro, .carrito {
+  display: flex;
+  align-items: center;
+}
+
+.registro a, .carrito a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro img, .carrito img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.registro a:hover, .carrito a:hover {
+  background-color: #ff7f00;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Contenido principal */
+.sobre-nosotros {
+  font-family: cursive;
+  background-color: #fce5b1;
+  margin: 50px 20px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-nosotros h1,
+.sobre-nosotros h2 {
+  color: #932206;
+}
+
+.sobre-nosotros h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #932206;
+  padding-bottom: 10px;
+}
+
+.sobre-nosotros h2 {
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+.sobre-nosotros p {
+  font-size: 16px;
+  color: #333;
+}
+
+.sobre-nosotros strong {
+  color: black;
+}
+
+/* Estilo para cuadros de misión y visión */
+.cuadro-info {
+  background-color: #fbf8ef;
+  border-left: 6px solid #ea613e;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cuadro-info h3 {
+  margin-top: 0;
+  color: #621503;
+}
+
+.cuadro-info p {
+  margin-bottom: 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mision-vision .cuadro-info {
+  flex: 1 1 45%;
+}
+
+/* Lista de valores */
+.sobre-nosotros ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.sobre-nosotros li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  font-family: cursive;
+  background-color: #743600;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .Logo img {
+    width: 170px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  #auth-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .registro, .carrito {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .registro a, .carrito a, .admin-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin: 0 5px;
+    width: auto;
+    text-align: center;
+  }
+
+  .admin-btn i {
+    font-size: 1.1em;
+  }
+
+  .registro img, .carrito img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fbf8ef;
+    border-top: 2px solid #dcdcdc;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .bottom-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #ea613e;
+  }
+
+  .bottom-nav img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .bottom-nav p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  body {
+    padding-bottom: 60px;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; 
+  }
+
+  .cuadro-info {
+    width: 100%; 
+    max-width: 500px; 
+  }
+}
+
+/* ===== MODO OSCURO PERSONALIZADO ===== */
+body.bg-dark .sobre-nosotros {
+  background-color: #615e5e;
+  color: #fff;
+}
+
+body.bg-dark .sobre-nosotros p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+body.bg-dark .cuadro-info p {
+    margin-bottom: 0;
+    color: #000000;
+    font-size: 15px;
+}
+
+body.bg-dark .sobre-nosotros li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+body.bg-dark .sobre-nosotros strong {
+    color: white;
+}
+
+body.bg-dark header {
+  background-color: #1b1a19 !important;
+}
+
+body.bg-dark footer {
+  background-color: #1b1a19 !important;
+  color: white !important;
+}
+
+body.bg-dark header .menu p {
+  color: white !important;
+}
+
+body.bg-dark header .menu p:hover {
+  color: #8b0707 !important;
+  border-bottom: 2px solid #8b0707  !important;
+}
+
+/* --- Estilo hover para los botones Iniciar sesión y Carrito en modo oscuro --- */
+body.bg-dark .registro a:hover,
+body.bg-dark .carrito a:hover {
+  background-color: #8b0707 !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.bg-dark footer h3 {
+  color: rgb(255, 255, 255) !important;
+}
+
+body.bg-dark .cuadro-info {
+  background-color: rgb(255, 255, 255) !important;
+  border-left: 6px solid #290101; /* Puedes mantener el color naranja */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra clara si quieres contraste */
+  border-radius: 10px;
+}
+
+#toggleTema {
+  bottom: 3rem !important; /* o 3rem si quieres más separación */
+}
+
+

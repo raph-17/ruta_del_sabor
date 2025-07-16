@@ -1,0 +1,186 @@
+:root {
+  --principal: rgb(0, 0, 0) !important;
+  --principal-hover: #ff7f00 !important;
+  --blanco: #ffffff !important;
+  --fondo-claro: #fce5b1 !important;
+}
+
+body {
+  background-color: var(--principal);
+  color: var(--blanco);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Contenedor principal */
+.fondo-claro {
+  font-family: cursive;
+  background-color: var(--fondo-claro);
+    border: 3px solid #000000;
+  border-radius: 50px;
+}
+
+
+/* Imagen de producto */
+.carrito-img {
+  width:100%;
+  height: 250px; /* Fija una altura consistente */
+  object-fit: cover; /* Rellena el área sin deformar, recortando si es necesario */
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  display: block;
+}
+
+/* Botón Confirmar Pago */
+#btn-confirmar {
+  background-color: var(--principal);
+  color: var(--blanco);
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin: 30px auto 10px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+#btn-confirmar:hover {
+  background-color: var(--principal-hover);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-volver {
+  background-color: var(--principal) !important;
+  color: var(--blanco) !important;
+  border: none !important;
+  padding: 12px !important;
+  font-size: 1.1rem !important;
+  border-radius: 30px !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+  animation: pulse 2s infinite !important;
+  text-align: center !important;
+}
+
+.btn-volver:hover {
+  background-color: var(--principal-hover) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+
+/* Títulos */
+h1 {
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Totales */
+.totales {
+  text-align: center;
+  font-weight: bold;
+  color: var(--principal);
+  margin: 20px 0;
+}
+
+.totales span {
+  font-weight: bold;
+  color: var(--principal);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);          /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== ESTILOS PERSONALIZADOS PARA MODO OSCURO ===== */
+
+body.bg-dark .fondo-claro {
+  background-color: #534d4b !important;
+  border-radius: 100px;
+}
+
+body.bg-dark h1 {
+  color: #ffffff !important; /* Título Confirmar Pago */
+}
+
+body.bg-dark .totales {
+  color: #ffffff !important; /* Texto blanco para subtotal */
+}
+
+body.bg-dark .totales span {
+  color: #ffffff !important; /* Texto blanco para monto subtotal */
+}
+
+body.bg-dark #btn-confirmar {
+  background-color: #8b0707 !important;
+  color: #ffffff !important;
+  animation: pulse-dark 2s infinite;
+}
+
+body.bg-dark #btn-confirmar:hover {
+  background-color: #000000 !important;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+body.bg-dark .btn-volver {
+  background-color: #8b0707 !important;
+  color: #ffffff !important;
+  animation: pulse-dark 2s infinite;
+}
+
+body.bg-dark .btn-volver:hover {
+  background-color: #000000 !important;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Nueva animación para modo oscuro */
+@keyframes pulse-dark {
+  0% { transform: scale(1); background-color: #8b0707; }
+  50% { transform: scale(1.04); background-color: #a82828; }
+  100% { transform: scale(1); background-color: #8b0707; }
+}
+
+body.bg-dark .fondo-claro {
+  border: 3px solid #ffffff; /* Borde blanco en modo oscuro */
+}
+
+@media (max-width: 768px) {
+  #carrito-grid .item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .carrito-img {
+    height: 180px;
+    border-radius: 30px;
+  }
+
+  .card {
+    border-radius: 30px;
+  }
+}
+.volver-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}

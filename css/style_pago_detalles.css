@@ -1,0 +1,146 @@
+:root {
+  --principal: #000000;
+  --principal-hover: #ff7f00 !important;
+  --blanco: #ffffff;
+  --fondo-claro: #fce5b1;
+}
+
+body {
+  background-color: var(--principal);
+  color: var(--blanco);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.fondo-claro {
+  font-family: cursive;
+  background-color: var(--fondo-claro);
+  border: 3px solid #000000;
+  border-radius: 50px;
+}
+
+#btn-procesar, .btn-confirmar {
+  background-color: var(--principal) !important;
+  color: var(--blanco) !important;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+  border-radius: 30px !important;
+}
+
+#btn-procesar:hover, .btn-confirmar:hover {
+  background-color: var(--principal-hover) !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  background-color: var(--principal) !important;
+  color: var(--blanco) !important;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1.1rem;
+  border-radius: 30px !important;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn-secondary:hover {
+  background-color: var(--principal-hover) !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+h1, h3 {
+  font-weight: bold;
+  color: #000000;
+}
+
+.totales {
+  text-align: center;
+  font-weight: bold;
+  color: var(--principal);
+  margin: 20px 0;
+}
+
+.totales span {
+  font-weight: bold;
+  color: var(--principal);
+}
+
+body.bg-dark .fondo-claro {
+  background-color: #534d4b !important;
+  border-radius: 100px;
+}
+
+body.bg-dark h1, body.bg-dark h3 {
+  color: #ffffff !important;
+}
+
+body.bg-dark .totales {
+  color: #ffffff !important;
+}
+
+body.bg-dark .totales span {
+  color: #ffffff !important;
+}
+
+body.bg-dark #btn-procesar, body.bg-dark .btn-confirmar {
+  background-color: #8b0707 !important;
+  color: #ffffff !important;
+  animation: pulse-dark 2s infinite;
+}
+
+body.bg-dark #btn-procesar:hover, body.bg-dark .btn-confirmar:hover {
+  background-color: #000000 !important;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+body.bg-dark .btn-secondary {
+  background-color: #6c757d !important;
+}
+
+body.bg-dark .btn-secondary:hover {
+  background-color: #5a6268 !important;
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes pulse-dark {
+  0% { transform: scale(1); background-color: #8b0707; }
+  50% { transform: scale(1.04); background-color: #a82828; }
+  100% { transform: scale(1); background-color: #8b0707; }
+}
+
+body.bg-dark .fondo-claro {
+  border: 3px solid #ffffff;
+}
+
+.progress-bar {
+  background-color: var(--principal);
+  color: var(--blanco);
+}
+
+body.bg-dark .progress-bar {
+  background-color: #8b0707 !important;
+}
+
+@media (max-width: 768px) {
+  .fondo-claro {
+    padding: 15px;
+  }
+}

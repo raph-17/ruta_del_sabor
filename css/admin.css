@@ -1,0 +1,85 @@
+/* Estilos para el botón naranja */
+.btn-naranja {
+  background-color: #ff7f00;
+  color: #000000;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-naranja:hover {
+  background-color: #000000;
+  color: #ea613e;
+  transform: scale(1.05);
+}
+
+/* Ajuste para el título y botón en pantallas pequeñas */
+@media (max-width: 576px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.status-select {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.table-naranja th,
+.table-naranja td {
+  vertical-align: middle;
+}
+
+.table-naranja select.form-select-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+#dateFilter {
+  max-width: 200px;
+}
+
+#clearFilter {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.status-select {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.table-naranja th,
+.table-naranja td {
+  vertical-align: middle;
+}
+
+.table-naranja select.form-select-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+#dateFilter {
+  max-width: 200px;
+}
+
+#clearFilter {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+

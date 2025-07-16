@@ -1,0 +1,1661 @@
+/* Estilos generales */
+body {
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+#productos-container {
+  background-color: #ff7f00;
+}
+
+body.bg-dark #productos-container {
+  background-color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  font-family: cursive;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Encabezado personalizado */
+header {
+  background-color: #ffc640;
+  color: white;
+  padding-top: 0px;
+  min-height: 70px;
+  border-bottom: 3px solid #fbf8ef;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav-container {
+  font-family: cursive;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 5px 30px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin-left: 0;
+  max-width: 200px;
+  flex: 1 1 100px;
+}
+
+.Logo img {
+  width: 190px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+header.minimized .Logo img {
+  width: 130px;
+}
+
+.Logo img:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  flex: none;
+  margin-left: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu p {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu p:hover {
+  color: #ff7f00;
+  border-bottom: 2px solid #ff7f00;
+}
+
+/* Contenedor de botones dinámicos */
+#auth-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilos para los botones de administrador */
+.admin-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #ffe5b4;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.admin-btn i {
+  font-size: 1.2em;
+}
+
+/* Vínculos (botones de Iniciar Sesión y Carrito) */
+.registro, .carrito {
+  display: flex;
+  align-items: center;
+}
+
+.registro a, .carrito a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro img, .carrito img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.registro a:hover, .carrito a:hover {
+  background-color: #ff7f00;
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Sección de Carrusel*/
+.inicio {
+  margin-top: 15px;
+}
+
+.inicio h2 {
+  color: #932206;
+  border-bottom: 2px solid #932206;
+  padding-bottom: 10px;
+}
+
+/* Imagenes Carrusel */
+#miCarrusel .carousel-item img {
+  max-width: 1500px; 
+  max-height: 500px;     
+  width: 100%;            
+  height: auto;           
+  margin: 0 auto;         
+  border-radius: 15px;   
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-item img:hover {
+  transform: scale(1.15);
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: rgba(192, 182, 182, 0.6); 
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+/* Contenedor Menu*/
+h1{
+  color: #ff7f00!important;
+  padding-bottom: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 30px;
+  justify-content: flex-start;
+  flex: none;
+  text-align: center;
+  /* Evita que empuje el contenido hacia la derecha */
+  margin-left: 20px;
+  border-bottom: 2px solid #ff7f00;
+  border-top: 2px solid #ff7f00;
+  padding-bottom: 10px;
+}
+
+
+.btn_2{
+background-color: #c1440e;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn_2:hover{
+  background-color: black;
+}
+
+.card-custom {
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: var(--sombra-suave);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    .menu-preview {
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-top: -2rem;
+      box-shadow: var(--sombra-suave);
+    }
+
+    .menu-item {
+      border: 1px solid rgb(138, 138, 138);
+      display: flex;
+      height: 150px; 
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto 1rem auto;       
+    }
+
+   .image-container {
+  flex: 3;
+  background-color: #ff7f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  }
+
+.image-containerA {
+  flex: 3;
+  background-color: #ff7f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-containerA img {
+  transform: translateY(-20px);
+  max-height: 120%;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.image-containerP {
+  flex: 3;
+  background-color: #ff7f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-containerP img {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.image-containerPA {
+  flex: 3;
+  background-color: #ff7f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-containerPA img {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.info {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.info h5 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+/* Contenedor Menu video del cuadro (Ver menu completo)*/
+.video-btn-container {
+  position: relative;
+  width: fit-content;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.ver-mas-btn {
+  position: relative;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  padding: 40px 60px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.4s ease;
+}
+
+.video-btn-container:hover .video-fondo {
+  opacity: 1;
+}
+
+.video-btn-container:hover .ver-mas-btn {
+  background-color: transparent;
+}
+
+/*FOOTER*/
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #743600;
+  color: white;
+  font-family: cursive;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contenido {
+  min-height: calc(100vh - 150px); /* Ajusta el 150px según la altura de tu footer */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  /* Asegura que las secciones estén distribuidas */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 20px;  /* Añadí padding en lugar de margin-top */
+  margin-top: 20px; /* Espaciado desde el top */
+  align-items: flex-start; /* Alinea las secciones al mismo nivel */
+}
+
+.footer-seccion {
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: 20px; /* Añadir un margen inferior para separar las secciones */
+}
+
+.footer-seccion h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  cursor: default;
+  padding-top: 10px;
+}
+
+.icono {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-right: 6px;
+   filter: brightness(0) invert(1);
+}
+
+.linea-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+.linea-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.linea-info a:hover {
+  color: #ea613e;
+}
+
+.footer-seccion h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
+.footer-seccion p,
+.footer-seccion a,
+.footer-seccion td,
+.footer-seccion th {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+}
+
+.footer-seccion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-seccion li {
+  margin-bottom: 8px;
+}
+
+.footer-seccion a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-seccion a:hover {
+  color: #ea613e;
+}
+
+/* Tabla horario Footer */
+.contacto-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 13px;
+  background-color: transparent;
+}
+
+/* Celdas normales */
+.contacto-tabla td {
+  border: 3px solid rgb(0, 0, 0);
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Encabezado */
+.contacto-tabla th {
+  border: 3px solid rgb(0, 0, 0);
+  background-color: #f1e3b4;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Línea separadora */
+.footer-linea {
+  border: none;
+  border-top: 1px solid white;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.footer-copy {
+  text-align: center;
+  color: white;  /* Si es necesario cambiar el color del texto */
+}
+
+
+
+/*MENÚ COMPLETO*/
+
+.swiper-container-wrapper{
+  margin-top: 15px;
+}
+
+.galeria-item img:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.galeria-horizontal {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.galeria-item {
+  min-width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.flechas {
+  text-align: right;
+  margin: 5px 0;
+}
+
+.flechas button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*MENÚ COMPLETO : Barra de busqueda*/
+#categorias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 1rem;
+}
+
+/*La seccion de menu botones de comidas*/
+#categorias-container .swiper-slide {
+  width: auto !important; /* importante para que tome el ancho natural */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Presentacion de los botones de comidas */
+#categorias-container button {
+ font-weight: bold;
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #eee;
+  border-radius: 25px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Botón activo */
+#categorias-container button.active {
+  background-color: #000000;
+  color: white;
+  font-weight: normal; /* texto normal para botón activo */
+}
+
+/* Flechas de los botones de comidas */
+.swiper-button-prev,
+.swiper-button-next {
+position: static; 
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #000000;
+    color: white;
+}
+
+.swiper-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+/*SWIPER BÁSICO PERSONALIZADO*/
+/* Contenedor del slider */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Botones de categoría */
+.swiper-slide button {
+  font-weight: bold;
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #eee;
+  border-radius: 25px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, font-weight 0.3s ease;
+}
+
+.swiper-slide button.active {
+  background-color: #000000;
+  color: white;
+  font-weight: normal;
+}
+
+/* Flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+  cursor: pointer;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next {
+  right: 0.5rem;
+}
+
+.swiper-button-prev {
+  left: 0.5rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*MENÚ COMPLETO : Cuadro de cada plato*/
+#productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.producto {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding-bottom: 1rem;
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  margin: 0.5rem;
+}
+
+.producto p {
+  margin: 0 0.5rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+.producto .precio {
+  font-weight: bold;
+  margin: 0 0.5rem;
+  color: #c62828;
+}
+
+.btn-agregar, .btn-salir {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+/*MENÚ COMPLETO : Se agrega al carrito*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex; /* Mostrar como flex para centrar */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: #fbf8ef;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#modalImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-agregar:hover {
+  background-color: #43a047;
+}
+
+.btn-salir {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-salir:hover {
+  background-color: #e53935;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/*BOTON CARRITO*/
+.seccion-carrito {
+  font-family: cursive;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 2rem 1rem;
+  background-color: transparent;
+}
+
+.seccion-carrito .carrito-contenedor {
+  background-color: #fce5b1;
+  color: #111;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seccion-carrito h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ff7f00;
+}
+
+/*BOTON CARRITO: Contenedor*/
+.carrito-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  gap: 1.2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.item-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+/*BOTON CARRITO: Contenedor boton eliminar*/
+.eliminar {
+  background-color: #c1440e;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.eliminar:hover {
+  background-color: #000000ce;
+}
+
+/*BOTON CARRITO: Contenedor resumen (Seguir Comprando y Ir a pagar)*/
+.resumen {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.resumen-botones {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.resumen-botones .btn-comprar,
+.resumen-botones .btn-seguir {
+  flex: 1;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  background-color: #ff7f00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resumen-botones .btn-comprar:hover,
+.resumen-botones .btn-seguir:hover {
+  background-color: #020202;
+}
+
+.resumen h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+
+/*OCULATA EL BOTON DE NAVEGACION INTERNA*/
+.bottom-nav {
+  display: none;
+}
+
+#toggleTema {
+  bottom: 3rem !important; /* o 3rem si quieres más separación */
+}
+
+
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .item-info {
+    align-items: center;
+  }
+
+  .resumen {
+    align-items: center;
+  }
+
+  .resumen-botones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .resumen-botones .btn-comprar,
+  .resumen-botones .btn-seguir {
+    width: 100%;
+  }
+
+  .resumen h3 {
+    font-size: 1.1rem;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Logo img {
+    width: 170px !important;
+    max-width: none;
+  }
+  .menu {
+    display: none; /* Oculta menú superior */
+  }
+
+  #auth-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .registro, .carrito {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .registro a, .carrito a, .admin-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin: 0 5px;
+    width: auto;
+    text-align: center;
+  }
+
+  .admin-btn i {
+    font-size: 1.1em;
+  }
+
+  .registro img, .carrito img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fbf8ef;
+    border-top: 2px solid #dcdcdc;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .bottom-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .bottom-nav a:hover {
+    color: #ea613e;
+  }
+
+  .bottom-nav p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .bottom-nav a span img {
+  width: 15px;  /* Tamaño pequeño, puedes ajustar */
+  height: 15px;
+  object-fit: contain;
+}
+
+  body {
+    padding-bottom: 60px; /* evita que la barra tape el contenido */
+  }
+
+
+  /* --- Footer acordeón --- */
+  .footer-seccion {
+    border-top: 1px solid #743600; /* línea separadora */
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-seccion h3 {
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 0;
+    background-color: #743600;
+    color: white;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  /* Indicador simple de acordeón (puedes usar + / -) */
+  .footer-seccion h3::after {
+    content: '+';
+    font-weight: 700;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-seccion.accordion-active h3::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+
+  /* Contenido del acordeón oculto por defecto */
+  .footer-seccion > *:not(h3) {
+    display: none;
+    padding: 0 20px 15px 20px;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Contenido visible con fondo blanco y texto negro al abrir acordeón */
+  /* Para secciones que NO son Contacto */
+  .footer-seccion.accordion-active:not(.contacto) > *:not(h3) {
+    display: block;
+    background-color: white;
+    color: black;
+    border-radius: 0 0 8px 8px;
+    padding: 15px 20px;
+  }
+
+  /* Para la sección Contacto, el fondo y padding se aplica a todo el contenedor .footer-info */
+  .footer-seccion.accordion-active.contacto > .footer-info {
+    display: block;
+    background-color: white;
+    color: black;
+    border-radius: 0 0 8px 8px;
+    padding: 15px 20px;
+  }
+
+  /* Ocultamos otros hijos excepto h3 y .footer-info en Contacto */
+  .footer-seccion.accordion-active.contacto > *:not(h3):not(.footer-info) {
+    display: none;
+  }
+
+  /* Links dentro del contenido acordeón */
+  .footer-seccion.accordion-active a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .footer-seccion.accordion-active a:hover {
+    color: #ea613e;
+  }
+
+  /* Para los íconos y texto en línea dentro de la sección abierta */
+  .footer-seccion.accordion-active .linea-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: black;
+    background: transparent; /* Quitamos fondo individual */
+  }
+
+.footer-seccion.accordion-active .linea-info a,
+.footer-seccion.accordion-active .linea-info span {
+  word-break: break-word;
+  white-space: normal;
+  max-width: 100%;
+}
+
+  .footer-seccion.accordion-active .linea-info img.icono {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Tabla dentro del acordeón con fondo blanco y texto negro */
+  .footer-seccion.accordion-active .contacto-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: transparent; /* quitar fondo individual para no romper el cuadro único */
+  }
+
+  .footer-seccion.accordion-active .contacto-tabla th,
+  .footer-seccion.accordion-active .contacto-tabla td {
+    color: black;
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .footer-seccion.accordion-active .contacto-tabla thead th {
+    background-color: #f1e3b4;
+  }
+
+  /* Lista en Sobre Nosotros con texto negro */
+  .footer-seccion.accordion-active ul,
+  .footer-seccion.accordion-active li {
+    color: black;
+  }
+  .footer-seccion.accordion-active strong {
+  color: black;
+}
+
+.footer-seccion.accordion-active img.icono {
+  filter: none !important;
+}
+
+/*Hace que desaparesca las flechas de desplazamiento*/
+.swiper-container-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .swiper-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 1rem;
+    width: max-content; /* ⚠️ Asegura que no se corte */
+    box-sizing: border-box;
+  }
+
+  .swiper-slide {
+    flex: 0 0 auto;
+  }
+
+  /* Ocultar flechas en móvil */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+.modal-content {
+    max-width: 80%;
+    max-height: 65vh;
+    padding: 1rem;
+    height: auto;    
+    overflow-y: auto;
+  }
+
+  #modalImg {
+    height: 130px; /* Imagen más baja */
+  }
+
+  .modal h4 {
+    font-size: 1.1rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .modal-buttons button {
+    width: 100%;
+    padding: 6px;
+  }
+
+/*Roponsivo conytenedor de menu*/
+   h1 {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-left: 0;
+    border-radius: 5px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    height: auto;
+    max-width: 95%;
+  }
+
+  .info h5 {
+    font-size: 1rem;
+  }
+
+  .btn_2 {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .video-btn-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .ver-mas-btn {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    min-width: unset;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .video-fondo {
+    border-radius: 8px;
+  }
+
+  .image-container img,
+  .image-containerA img,
+  .image-containerP img,
+  .image-containerPA img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+
+
+/* ===== MODO OSCURO PERSONALIZADO ===== */
+
+body.bg-dark header {
+  background-color: #1b1a19 !important;
+}
+
+body.bg-dark footer {
+  background-color: #1b1a19 !important;
+  color: white !important;
+}
+
+body.bg-dark header .menu p {
+  color: white !important;
+}
+
+body.bg-dark header .menu p:hover {
+  color: #8b0707 !important;
+  border-bottom: 2px solid #8b0707  !important;
+}
+
+/* --- Estilo hover para los botones Iniciar sesión y Carrito en modo oscuro --- */
+body.bg-dark .registro a:hover,
+body.bg-dark .carrito a:hover {
+  background-color: #8b0707 !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.bg-dark footer .footer-seccion,
+body.bg-dark footer p,
+body.bg-dark footer a,
+body.bg-dark footer td,
+body.bg-dark footer th,
+body.bg-dark footer h3,
+body.bg-dark footer span,
+body.bg-dark .footer-copy {
+  color: white !important;
+}
+
+body.bg-dark .container h1 {
+  color: white !important;
+  border-color: white !important;
+  background-color: transparent;
+}
+
+/* Colores oscuros en los rectángulos del menú */
+body.bg-dark .menu-preview .menu-item {
+  background-color: #000000 !important;
+  border: 1px solid #ffffff50;
+}
+
+body.bg-dark .menu-preview .menu-item .info {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Botón Ver más en modo oscuro */
+body.bg-dark .btn_2 {
+  background-color: #290101;
+  color: white;
+}
+
+body.bg-dark .btn_2:hover {
+  background-color: #8b0707;
+}
+
+body.bg-dark .image-container,
+body.bg-dark .image-containerA,
+body.bg-dark .image-containerP,
+body.bg-dark .image-containerPA {
+  background-color: #290101 !important;
+}
+
+/* Opcional: tabla del footer */
+body.bg-dark .contacto-tabla td {
+  background-color: #1b1a19 ;
+  color: white;
+}
+
+body.bg-dark .contacto-tabla th {
+  background-color: #290101 ;
+  color: white;
+}
+
+body.bg-dark{
+  background-color: #333;
+}
+
+/* Fondo negro del slider en modo oscuro */
+body.bg-dark .swiper-container-wrapper,
+body.bg-dark .swiper-container {
+  background-color: #000 !important;
+}
+
+/* Fondo y texto de cada slide (botón/opción de comida) */
+/* Asegurar que el texto en los slides sea blanco */
+body.bg-dark .swiper-slide * {
+  color: white !important;
+}
+
+/* Opcional: si usas botones dentro de slides */
+body.bg-dark .swiper-slide button {
+  background-color: #290101 !important;
+  color: white !important;
+  border: none;
+}
+
+body.bg-dark .swiper-slide button:hover {
+  background-color: #ffffff !important;
+  color: rgb(0, 0, 0) !important;
+  border: none;
+}
+
+/*DARK MENU-COMPLETO*/
+.bg-dark .item {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+.bg-dark .item-info h3,
+.bg-dark .item-info p,
+.bg-dark .resumen h3 {
+  color: #ffffff;
+}
+
+.bg-dark .item input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.bg-dark .eliminar {
+  background-color: #290101;
+}
+
+.bg-dark .eliminar:hover {
+  background-color: #000000;
+}
+
+.bg-dark .resumen {
+  border-top: 1px solid #000000;
+}
+
+
+@media (max-width: 768px) {
+ body.bg-dark .footer-seccion h3 {
+    background-color: #111 !important;
+    color: white !important;
+  }
+
+  body.bg-dark .footer-seccion h3::after {
+    color: white !important;
+  }
+
+  /* Contenido desplegado: fondo blanco con texto negro */
+  body.bg-dark .footer-seccion.accordion-active:not(.contacto) > *:not(h3),
+  body.bg-dark .footer-seccion.accordion-active.contacto > .footer-info {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active a,
+  body.bg-dark .footer-seccion.accordion-active p,
+  body.bg-dark .footer-seccion.accordion-active span,
+  body.bg-dark .footer-seccion.accordion-active strong,
+  body.bg-dark .footer-seccion.accordion-active li {
+    color: black !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active a:hover {
+    color: #ea613e !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active .linea-info {
+    color: black !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active .contacto-tabla th,
+  body.bg-dark .footer-seccion.accordion-active .contacto-tabla td {
+    color: black !important;
+    border-color: #ccc;
+    background-color: white !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active .contacto-tabla thead th {
+    background-color: #f1e3b4 !important;
+    color: black !important;
+  }
+
+  body.bg-dark .footer-seccion.accordion-active img.icono {
+    filter: none !important;
+  }
+}
+
+/*Dark de Carrito*/
+body.bg-dark .seccion-carrito .carrito-contenedor {
+  background-color: #534d4b !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.bg-dark .seccion-carrito .carrito-contenedor h2 {
+color: white;
+}
+
+.bg-dark .resumen-botones .btn-comprar,
+.bg-dark .resumen-botones .btn-seguir {
+  background-color: #8b0707;
+  color: #fff;
+}
+
+.bg-dark .resumen-botones .btn-comprar:hover,
+.bg-dark .resumen-botones .btn-seguir:hover {
+  background-color: #000000;
+}
+
+body.bg-dark .resumen h3 {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+/* Estilos para las tarjetas de productos en modo oscuro */
+body.bg-dark .producto.galeria-item {
+    background-color: #1e1e1e; /* Fondo oscuro para las tarjetas */
+    color: #ffffff; /* Texto blanco para contraste */
+    border: 1px solid #555; /* Borde para distinguir las tarjetas */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05); /* Sombra sutil */
+}
+
+body.bg-dark .producto.galeria-item h3 {
+    color: #ffffff; /* Título en blanco */
+}
+
+body.bg-dark .producto.galeria-item p {
+    color: #cccccc; /* Descripción en gris claro para contraste */
+}
+
+body.bg-dark .producto.galeria-item .precio {
+    color: #c62828; /* Precio en un color destacado (naranja) */
+}
+
+body.bg-dark .producto.galeria-item img {
+    filter: brightness(90%); /* Ligeramente más oscuro para armonizar con el tema */
+}
+
+/* Estilos para modo oscuro */
+body.bg-dark .admin-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+body.bg-dark .admin-btn:hover {
+    background-color: #ea613e;
+}
+
+/* Asegurar que los íconos de Bootstrap se vean bien */
+body.bg-dark .admin-btn i {
+    color: #fff;
+}
+
+.carrusel {
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      color: #000;
+    }
+    .carta-reseña {
+      scroll-snap-align: start;
+      flex: none;
+      width: 300px;
+    }
+    .carrusel::-webkit-scrollbar {
+      display: none;
+    }
